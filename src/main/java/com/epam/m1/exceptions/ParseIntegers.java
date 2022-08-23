@@ -23,71 +23,14 @@ public class ParseIntegers {
         String justWords = " ";
 
         while (words.hasNext()) {
-            // 1
             String next = words.next();
-            justWords += next + " ";
+            try {
+                int number = Integer.parseInt(next);
+                sum += number;
+            } catch (NumberFormatException ex) {
+                justWords += next + " ";
+            }
 
-            next = words.next();
-            int number = Integer.parseInt(next);
-            sum += number;
-
-            next = words.next();
-            justWords += next + " ";
-
-            next = words.next();
-            justWords += next + " ";
-
-            next = words.next();
-            justWords += next + " ";
-
-            // 6
-            next = words.next();
-            number = Integer.parseInt(next);
-            sum += number;
-
-            next = words.next();
-            justWords += next + " ";
-
-            next = words.next();
-            number = Integer.parseInt(next);
-            sum += number;
-
-            next = words.next();
-            justWords += next + " ";
-
-            next = words.next();
-            number = Integer.parseInt(next);
-            sum += number;
-
-            // 11
-            next = words.next();
-            justWords += next + " ";
-
-            next = words.next();
-            justWords += next + " ";
-
-            next = words.next();
-            number = Integer.parseInt(next);
-            sum += number;
-
-            next = words.next();
-            justWords += next + " ";
-
-            next = words.next();
-            justWords += next + " ";
-
-            next = words.next();
-            justWords += next + " ";
-
-            next = words.next();
-            number = Integer.parseInt(next);
-            sum += number;
-
-            next = words.next();
-            justWords += next + " ";
-
-            next = words.next();
-            justWords += next;
         }
 
         System.out.println("Sum is " + sum);
